@@ -6,11 +6,18 @@ const notValidMail = ['pippo@gmail.com', 'pluto@gmail.com', 'caio@gmail.com', 't
 
 let view_title = document.getElementById('title');
 
+let flag = false;//varaiabile che usiammo per verificare la validità della mail
 for(let i=0; i<notValidMail.length; i++){
     if(notValidMail[i] == mail){
-        alert("Mail già usata! inserisci un'altra Mail");
+        flag = true;
     }
-    else{
-        view_title.innerText = ('Benvenuto!')
-    }
+}
+
+if(flag == true){
+    alert('Mail già usata! Inserisci nuova Mail');
+    console.log('Mail già usata! inserisci nuova mail');
+}
+else{
+    view_title.innerText = ('Benvenuto!');
+    console.log('Mail valida');
 }

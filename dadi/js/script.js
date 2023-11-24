@@ -16,7 +16,6 @@ let view_text = document.getElementById('text');
 //confronta risultati ottenuti e dichiara se hai vinto o hai perso
 if(user > cpu){
     view_text.innerText = ('Hai vinto!');
-    
 }
 else if(user < cpu){
     view_text.innerText = ('Hai perso!');
